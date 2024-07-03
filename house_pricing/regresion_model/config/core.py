@@ -51,6 +51,7 @@ class ModelConfig(BaseModel):
     categorical_vars: Sequence[str]
     qual_mappings: Dict[str, int]
     exposure_mappings: Dict[str, int]
+    garage_mappings: Dict[str, int]
     finish_mappings: Dict[str, int]
 
 class Config(BaseModel):
@@ -86,7 +87,7 @@ def create_and_validate_config(parsed_config: YAML=None) -> Config:
         Run validation on config values
     """
     if parsed_config is None:
-        parsed_config = find_config_file()
+        parsed_config = fetch_config_from_yaml()
     
     # specify data attribute from the strictyaml YAML type
     _config = Config(
