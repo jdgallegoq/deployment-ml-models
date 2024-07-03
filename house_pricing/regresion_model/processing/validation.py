@@ -9,7 +9,7 @@ from regresion_model.config.core import config
 
 def drop_na_inputs(*, input_data: pd.DataFrame) -> pd.DataFrame:
     """
-        Check model inputs for na values and filter.
+    Check model inputs for na values and filter.
     """
     validated_data = input_data.copy()
     new_vars_with_na = [
@@ -28,7 +28,7 @@ def drop_na_inputs(*, input_data: pd.DataFrame) -> pd.DataFrame:
 
 def validate_inputs(*, input_data: pd.DataFrame) -> Tuple[pd.DataFrame, Optional[dict]]:
     """
-        Check model inputs for unprocessable values.
+    Check model inputs for unprocessable values.
     """
 
     # convert syntax error field names (beginning with numbers)
