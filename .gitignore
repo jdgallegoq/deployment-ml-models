@@ -171,4 +171,4 @@ cython_debug/
 *secrets.py
 
 # serialized models
-*.pkl*
+#*.pkl*
