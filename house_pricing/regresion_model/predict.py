@@ -11,12 +11,13 @@ from regresion_model.processing.validation import validate_inputs
 pipeline_file_name = f"{config.app_config.pipeline_save_file}{_version}.pkl"
 _price_pipeline = load_pipeline(file_name=pipeline_file_name)
 
+
 def make_prediction(
-        *,
-        input_data: t.Union[pd.DataFrame, dict],
+    *,
+    input_data: t.Union[pd.DataFrame, dict],
 ) -> dict:
     """
-        Make prediction using saved model pipeline
+    Make prediction using saved model pipeline
     """
     data = pd.DataFrame(input_data)
     validated_data, errors = validate_inputs(input_data=data)
@@ -29,7 +30,7 @@ def make_prediction(
         results = {
             "predictions": [np.exp(pred) for pred in predictions],
             "version": _version,
-            "errors": errors
+            "errors": errors,
         }
-    
+
     return results
