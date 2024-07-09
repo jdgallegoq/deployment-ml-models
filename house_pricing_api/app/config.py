@@ -1,7 +1,7 @@
 import logging
 import sys
 from types import FrameType
-from types import List, cast
+from typing import List, cast
 
 from loguru import logger
 from pydantic import AnyHttpUrl, BaseSettings
