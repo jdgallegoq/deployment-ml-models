@@ -2,3 +2,12 @@
 
 The goal is to package the model following this steps:
 [![](https://mermaid.ink/img/pako:eNo1UM1qwzAMfhXhUwZpHyCHQbvCDhtsrN1p2UG1lUTUkTPHWVvavvuULDUYy_p-9KGLscGRKUzlw9E2GBPsNqWAntXXe6QOWsU9sMCSu7PsQfbfsFg8Xj8GAU6A4qAmfb2Ht5crrLPPzmEisEEqrh_-vdajBGz2GtCB0BGUgjNmJ8xl2zROP3JqAKHntvMEHXfkWWimuolK2VOkcURq9EZkyaGL5NimHH7Rs5pzkDH54KmftTRpq3u8UbujPt3haoKfs5VzExYVg1BN9biiHFI4LVlYZ6E9YE1QsbrnyvwZOFJLkvplOmkGSnZ2NblpKbbITld8GXulUceWSlNo6TAeSlPKTXk4pLA9izVFigPlJoahbkxRoe_1N0ypN4x1xHbu3v4AjvGQCg?type=png)](https://mermaid.live/edit#pako:eNo1UM1qwzAMfhXhUwZpHyCHQbvCDhtsrN1p2UG1lUTUkTPHWVvavvuULDUYy_p-9KGLscGRKUzlw9E2GBPsNqWAntXXe6QOWsU9sMCSu7PsQfbfsFg8Xj8GAU6A4qAmfb2Ht5crrLPPzmEisEEqrh_-vdajBGz2GtCB0BGUgjNmJ8xl2zROP3JqAKHntvMEHXfkWWimuolK2VOkcURq9EZkyaGL5NimHH7Rs5pzkDH54KmftTRpq3u8UbujPt3haoKfs5VzExYVg1BN9biiHFI4LVlYZ6E9YE1QsbrnyvwZOFJLkvplOmkGSnZ2NblpKbbITld8GXulUceWSlNo6TAeSlPKTXk4pLA9izVFigPlJoahbkxRoe_1N0ypN4x1xHbu3v4AjvGQCg)
+
+## For building
+Make sure tests passed and have the following:
+- MANIFEST.IN
+- pyproject.toml
+- setup.py
+- run in terminal 
+    - `pip install --upgrade build`
+    - `python3 -m build`
