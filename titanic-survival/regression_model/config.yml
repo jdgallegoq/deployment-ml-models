@@ -1,0 +1,60 @@
+# Package overview
+package_name: regression_model
+
+# Data file
+training_data_file: titanic.csv
+test_data_file: test.csv
+
+# Variables
+# target
+target: survived
+
+pipeline_name: regression_model
+pipeline_save_file: regression_model_v
+
+# title variable
+title_variable: title
+# convert to float variables
+to_float_variables:
+  - fare
+  - age
+# drop variables
+drop_variables:
+  - name
+  - ticket
+  - boat
+  - body
+  - home.dest
+# features
+features:
+  - pclass
+  - sex
+  - age
+  - sibsp
+  - parch
+  - fare
+  - cabin
+  - embarked
+  - title
+  # calculated
+  - cabin_letter
+
+numerical_variables:
+  - pclass
+  - age
+  - sibsp
+  - parch
+  - fare
+
+categorical_variables:
+  - sex
+  - cabin
+  - embarked
+  - title
+
+cabin: cabin_letter
+
+# model config
+test_size: 0.1
+random_state: 0
+alpha: 0.0005
