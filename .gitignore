@@ -166,6 +166,7 @@ cython_debug/
 *.xlsx
 *.parquet
 *.png
+*.png
 
 # Secrets
 *secrets
