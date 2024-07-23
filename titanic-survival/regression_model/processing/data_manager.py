@@ -17,6 +17,7 @@ def load_dataset(*, file_name: str) -> pd.DataFrame:
     dataframe = pd.read_csv(Path(f"{DATASET_DIR}/{file_name}"))
     dataframe = dataframe.replace('?', np.nan)
     dataframe[config.model_config.to_float_variables] = dataframe[config.model_config.to_float_variables].astype(float)
+
     for column in config.model_config.drop_variables:
         try:
             dataframe.drop(column, axis=1, inplace=True)
@@ -80,7 +81,6 @@ def get_title(passenger):
     elif re.search('Master', line):
         return 'Master'
     else:
-        return 'Other'
-    
+
 if __name__=='__main__':
     print(load_dataset(file_name='train.csv').info())
