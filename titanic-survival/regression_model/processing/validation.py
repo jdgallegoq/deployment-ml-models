@@ -15,7 +15,11 @@ def validate_inputs(*, input_data:pd.DataFrame) -> Tuple[pd.DataFrame, Optional[
     relevant_data = input_data[config.model_config.features].copy()
     relevant_data = relevant_data.replace('?', np.nan)
     relevant_data[config.model_config.to_float_variables] = relevant_data[config.model_config.to_float_variables].astype(float)
-    relevant_data.drop(config.model_config.drop_variables, inplace=True)
+    for column in config.model_config.drop_variables:
+        try:
+            relevant_data.drop(config.model_config.drop_variables, inplace=True)
+        except KeyError:
+            pass
     # get first cabin
     relevant_data[config.model_config.cabin] = relevant_data[config.model_config.cabin].apply(get_first_cabin)
     # get title from name

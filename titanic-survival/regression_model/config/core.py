@@ -85,4 +85,6 @@ def create_and_validate_config(parsed_config: YAML=None)-> Config:
         model_config=ModelConfig(**parsed_config.data)
     )
 
+    return _config
+
 config = create_and_validate_config()

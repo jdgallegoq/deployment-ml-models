@@ -3,6 +3,7 @@ package_name: regression_model
 
 # Data file
 training_data_file: titanic.csv
+#training_data_file: train.csv
 test_data_file: test.csv
 
 # Variables
@@ -37,7 +38,7 @@ features:
   - embarked
   - title
   # calculated
-  - cabin_letter
+  #- cabin_letter
 
 numerical_variables:
   - pclass
@@ -52,7 +53,7 @@ categorical_variables:
   - embarked
   - title
 
-cabin: cabin_letter
+cabin: cabin
 
 # model config
 test_size: 0.1
